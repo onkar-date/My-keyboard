@@ -1,0 +1,106 @@
+$base-color: #b279da;
+$base-margin: 2rem;
+$margin-left: 2rem;
+$margin-top: 2rem;
+$margin-right: 2rem;
+$margin-bottom: 2rem;
+.wrapper{
+    margin: $base-margin;
+    display: flex;
+    justify-content: center;
+    .keyboard{
+        padding: 1rem;
+        background-color: black;
+        height: 742px;
+        width: 1215px;
+        transform: scale(0.8);
+    }
+    .keyboard .top{
+        margin-bottom: 10px;
+        .sound{
+            height: 100px;
+            margin-bottom: 15px;
+            display: flex;
+            .left-half{
+                width: 50%;
+                height: 100px;
+                background: #0c0e10;
+                clip-path: polygon(6% 0, 100% 0%, 100% 100%, 6% 100%, 0% 50%);
+            }
+            .right-half{
+                width: 50%;
+                height: 100px;
+                background: #0c0e10;
+                clip-path: polygon(0% 0%, 94% 0, 100% 50%, 93% 99%, 0% 100%);
+            }
+        }
+        .power-btn-container{
+            width: 50px;
+            border: $base-color 1px solid;
+            padding: 3px;
+            border-radius: 0.1rem;
+            .power-btn{
+                background-color: $base-color;
+                height: 3px;
+                width: 100%;
+            }
+
+            .power-btn.on{
+                box-shadow: 
+                0 0 3px 4px #fff,
+                0 0 2px 5px #f0f,
+                0 0 1px 1px #b279da;
+            }
+        }
+    }
+
+    .keyboard .keys{
+        display: flex;
+        box-shadow: 0 0.5rem 1rem #e9ecef1a !important;
+        .left{
+            width: 950px;
+        }
+        .right{
+            margin-left: 15px;
+            width: 216px;
+        }   
+    }
+
+    .keyboard .right .table{
+        color: $base-color;
+    }
+}
+
+
+.brand{
+    width: 23%;
+    color: #b68cd378;
+}
+.touchpad-container{
+    width: 47%;
+    .touchpad{
+        width: 390px;
+        height: 200px;
+        background: #181a1c;
+    }
+}
+
+.specs-container{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .spec{
+        align-self: flex-end;
+    }
+}
+
+
+.dot {
+    background: radial-gradient(ellipse at center, #181a1c 0%, #181a1c 30%, transparent 30%);
+    background-size: 5px 5px;
+    background-repeat: repeat-x;
+    background-position: 5px center;
+    width: 100vw;
+    height: 10px;
+  }

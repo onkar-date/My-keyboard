@@ -1,0 +1,131 @@
+$standard-height: 50px;
+$standard-width: 50px;
+$medium-width: 70px;
+$large-width: 100px;
+$small-height: 30px;
+$small-width: 35px;
+.key{
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    background-color: black;
+    color: $base-color;
+    font-size: x-small;
+    border: 1px solid #3b1656 !important;
+    border-radius: 0.3rem !important; 
+    
+}
+.key.on{
+    box-shadow: 1px 0rem 1rem rgb(157 54 230 / 36%) !important;
+    border: 1px solid $base-color !important;
+}
+div.key{
+    display: flex;
+    @extend .key;
+}
+.key-content-left{
+    justify-content: space-between !important;
+    padding-left: 1rem;
+}
+.key-content-right{
+    justify-content: flex-end !important;
+    padding-right: 1rem;
+}
+.standard-key{
+    height: $standard-height;
+    width: $standard-width;
+}
+
+.md-w-key{
+    @extend .standard-key;
+    width: $medium-width;
+}
+
+.key-type-1{
+    width: 47px;
+    height: $small-height;
+}
+
+.key-type-2{
+    @extend .standard-key;
+    width: 47px;
+}
+
+.s-w-key{
+    @extend .standard-key;
+    width: $small-width;
+}
+
+.lg-w-key{
+    @extend .standard-key;
+    width: $large-width;
+}
+
+.backspace{
+    @extend .standard-key;
+    width: 90px;
+}
+
+.tab{
+    @extend .standard-key;
+    @extend .key-content-left;
+    width: 70px;
+}
+
+.backslash{
+    @extend .standard-key;
+    width: 60px;
+}
+
+.caps-lock{
+    @extend .standard-key;
+    @extend .key-content-left;
+    width: 90px;
+}
+
+.enter{
+    @extend .standard-key;
+    @extend .key-content-right;
+    width: 110px;
+}
+
+.shift{
+    @extend .standard-key;
+    width: 135px;
+}
+
+.right-shift{
+    @extend .shift;
+    @extend .key-content-right;
+}
+
+.left-shift{
+    @extend .shift;
+    @extend .key-content-left;
+}
+
+.spacebar{
+    @extend .standard-key;
+    width: 350px;
+}
+
+
+.numpad-plus{
+    @extend .standard-key;
+    height: 110px;
+}
+
+.numpad-enter{
+    @extend .standard-key;
+    height: 110px;
+}
+
+.numpad-zero{
+    @extend .standard-key;
+    width: 102px;
+}
+
+.arrow-key{
+    @extend .standard-key;
+    height: 25px;
+}

@@ -1,0 +1,108 @@
+<div class="keys">
+    <div class="left">
+        <div *ngFor="let row of keyboardKeysLeft" class="d-flex justify-content-between">
+            <ng-container *ngFor="let key of row.keys">
+                <ng-container *ngIf="key.name === 'arrow'; else normalKey">
+                    <div>
+                        <div
+                        *ngFor="let arrowKey of key.keys"
+                        class="key" [class]="arrowKey.class">
+                        <span *ngIf="!arrowKey.icon">
+                            {{arrowKey.name}}
+                        </span>
+                        <i *ngIf="arrowKey.icon"
+                            [class]="arrowKey.iconClass"
+                            aria-hidden="true">
+                        </i>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-template #normalKey>
+                    <div
+                        class="key"
+                        [class]="key.class">
+                        <div>
+                            <span *ngIf="!key.icon">
+                                {{key.name}}
+                            </span>
+                            <i *ngIf="key.icon"
+                                [class]="key.iconClass"
+                                aria-hidden="true">
+                            </i>
+                        </div>
+                    </div>
+                </ng-template>
+            </ng-container>
+        </div>
+    </div>
+    <div class="right d-flex">
+        
+        <!-- standard grid -->
+        <div>
+            <!-- 1st row -->
+            <div class="d-flex">
+                <div
+                    *ngFor="let key of keyboardKeysRight[0].keys"
+                    [class]="key.class" class="key mr-2">
+                    <span>{{key.name}}</span>
+                </div>
+            </div>
+
+            <!-- 2nd row -->
+            <div class="d-flex">
+                <div
+                    *ngFor="let key of keyboardKeysRight[1].keys"
+                    [class]="key.class" class="key mr-2">
+                    <span>{{key.name}}</span>
+                </div>
+            </div>
+
+            <!-- 3rd row -->
+            <div class="d-flex">
+                <div
+                    *ngFor="let key of keyboardKeysRight[2].keys"
+                    [class]="key.class" class="key mr-2">
+                    <span>{{key.name}}</span>
+                </div>
+            </div>
+
+            <!-- 4th row -->
+            <div class="d-flex">
+                <div
+                    *ngFor="let key of keyboardKeysRight[3].keys"
+                    [class]="key.class" class="key mr-2">
+                    <span>{{key.name}}</span>
+                </div>
+            </div>
+
+            <!-- 5th row -->
+            <div class="d-flex">
+                <div
+                    *ngFor="let key of keyboardKeysRight[4].keys"
+                    [class]="key.class" class="key mr-2">
+                    <span>{{key.name}}</span>
+                </div>
+            </div>
+
+            <!-- 6th row -->
+            <div class="d-flex">
+                <div
+                    *ngFor="let key of keyboardKeysRight[5].keys"
+                    [class]="key.class" class="key mr-2">
+                    <span>{{key.name}}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- row and col span grid -->
+        <div>
+            <div class="d-flex flex-column">
+                <div
+                    *ngFor="let key of numpadRightKeys"
+                    [class]="key.class" class="key">
+                    <span>{{key.name}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
