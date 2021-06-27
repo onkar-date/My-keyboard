@@ -17,6 +17,6 @@ export const SocialMedia = [
   {
     name: 'Instagram',
     class: 'fa fa-2x fa-instagram',
-    url: 'https://www.instagram.com/onkar1011/'
+    url: 'https://www.instagram.com/onkaar_date/'
   }
 ]
