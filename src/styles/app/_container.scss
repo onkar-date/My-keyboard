@@ -5,15 +5,30 @@ $margin-top: 2rem;
 $margin-right: 2rem;
 $margin-bottom: 2rem;
 .wrapper{
-    margin: $base-margin;
+    position: absolute;
+    top: -22rem;
+    left: 50%;
+    right: 50%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(50%);
+    .screen{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        background-color: black;
+        height: 742px;
+        width: 1215px;
+        transform: translateY(1px);
+        clip-path: polygon(50% 0%, 100% 0, 100% 94%, 75% 100%, 25% 100%, 0 94%, 0 0);
+    }
     .keyboard{
         padding: 1rem;
         background-color: black;
         height: 742px;
         width: 1215px;
-        transform: scale(0.8);
     }
     .keyboard .top{
         margin-bottom: 10px;

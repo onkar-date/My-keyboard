@@ -18,6 +18,8 @@ export class TopPartComponent implements OnInit {
     const powerBtn = document.getElementById('powerBtn');
     powerBtn.classList.toggle('on');
     const keyBtns = document.getElementsByClassName('key');
+    const hpLogo = document.getElementsByClassName('hp-logo');
+    hpLogo[0].classList.toggle('on');
     // tslint:disable-next-line: prefer-for-of
     for (let i = 0; i < keyBtns.length; i++) {
       setTimeout(() => {

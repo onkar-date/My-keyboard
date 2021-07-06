@@ -331,7 +331,9 @@ export const LeftPart = [
       },
       {
         name: '<',
-        class: 'standard-key'
+        class: 'standard-key',
+        icon: true,
+        iconClass: 'fa fa-caret-left fa-2x'
       },
       {
         name: 'arrow',
@@ -353,7 +355,9 @@ export const LeftPart = [
       },
       {
         name: '>',
-        class: 'standard-key'
+        class: 'standard-key',
+        icon: true,
+        iconClass: 'fa fa-caret-right fa-2x'
       }
     ]
   }
