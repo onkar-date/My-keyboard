@@ -8,6 +8,7 @@ img.hp-logo{
     animation: logoAnimation ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    transform: translateY(-175px) rotateX(34deg) perspective(8px);
 }
 
 img.hp-logo.on{
