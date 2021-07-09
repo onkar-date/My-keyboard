@@ -6,23 +6,26 @@ $margin-right: 2rem;
 $margin-bottom: 2rem;
 .wrapper{
     position: absolute;
-    top: -22rem;
+    top: -34rem;
     left: 50%;
     right: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     transform: scale(50%);
+    perspective: 1000px;
     .screen{
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 1rem;
         background-color: black;
-        height: 742px;
-        width: 1215px;
-        transform: translateY(1px);
-        clip-path: polygon(50% 0%, 100% 0, 100% 94%, 75% 100%, 25% 100%, 0 94%, 0 0);
+        height: 850px;
+        width: 1450px;
+        transform: translateY(260px) rotateX(296deg);
+        clip-path: polygon(50% 0%, 80% 0%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 20% 0);
+        border: 5px solid #636363 !important;
     }
     .keyboard{
         padding: 1rem;

@@ -10,7 +10,7 @@ import { timer } from 'rxjs';
 export class TopPartComponent implements OnInit {
 
   constructor() { }
-  powerOn = false;
+  powerOn = true;
   ngOnInit(): void {
   }
 
