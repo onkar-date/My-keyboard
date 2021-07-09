@@ -4,6 +4,10 @@ html, body{
     margin: 0;
     background-image: url('../../assets/images/background-3.jpg');
     font-family: cursive !important;
+    min-height: 1068px;
+    & > .display-seperate{
+      min-height: 0;
+    }
 }
 
 .main-content{

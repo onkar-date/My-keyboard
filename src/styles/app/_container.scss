@@ -1,4 +1,4 @@
-$base-color: #b279da;
+
 $base-margin: 2rem;
 $margin-left: 2rem;
 $margin-top: 2rem;
@@ -6,84 +6,104 @@ $margin-right: 2rem;
 $margin-bottom: 2rem;
 .wrapper{
     position: absolute;
-    top: -22rem;
+    top: -24rem;
     left: 50%;
     right: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     transform: scale(50%);
+    perspective: 1000px;
     .screen{
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 1rem;
         background-color: black;
-        height: 742px;
-        width: 1215px;
-        transform: translateY(1px);
-        clip-path: polygon(50% 0%, 100% 0, 100% 94%, 75% 100%, 25% 100%, 0 94%, 0 0);
+        height: 850px;
+        width: 1080px;
+        border: 5px solid #636363;
+        border-bottom: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 93%, 75% 100%, 25% 100%, 0 93%);
     }
-    .keyboard{
-        padding: 1rem;
+    .hinge{
+        height: 23px;
+        width: 541px;
         background-color: black;
-        height: 742px;
-        width: 1215px;
+        border: 5px solid #636363;
+        border-top: 0;
     }
-    .keyboard .top{
-        margin-bottom: 10px;
-        .sound{
-            height: 100px;
-            margin-bottom: 15px;
-            display: flex;
-            .left-half{
-                width: 50%;
-                height: 100px;
-                background: #0c0e10;
-                clip-path: polygon(6% 0, 100% 0%, 100% 100%, 6% 100%, 0% 50%);
-            }
-            .right-half{
-                width: 50%;
-                height: 100px;
-                background: #0c0e10;
-                clip-path: polygon(0% 0%, 94% 0, 100% 50%, 93% 99%, 0% 100%);
-            }
-        }
-        .power-btn-container{
-            width: 50px;
-            border: $base-color 1px solid;
-            padding: 3px;
-            border-radius: 0.1rem;
-            .power-btn{
-                background-color: $base-color;
-                height: 3px;
-                width: 100%;
-            }
-
-            .power-btn.on{
-                box-shadow: 
-                0 0 3px 4px #fff,
-                0 0 2px 5px #f0f,
-                0 0 1px 1px #b279da;
-            }
-        }
+}
+.keyboard-wrapper{
+    position: relative;
+}
+.keyboard{
+    padding: 1rem;
+    background-color: black;
+    height: 742px;
+    width: 1215px;
+    transform: rotateX(20deg) translateY(-14px);
+    &.display-seperate {
+        position: fixed;
+        top: -6%;
+        left: 7%;
+        transform: scale(0.75);
     }
-
-    .keyboard .keys{
+}
+.keyboard .top{
+    margin-bottom: 10px;
+    .sound{
+        height: 100px;
+        margin-bottom: 15px;
         display: flex;
-        box-shadow: 0 0.5rem 1rem #e9ecef1a !important;
-        .left{
-            width: 950px;
+        .left-half{
+            width: 50%;
+            height: 100px;
+            background: #0c0e10;
+            clip-path: polygon(6% 0, 100% 0%, 100% 100%, 6% 100%, 0% 50%);
         }
-        .right{
-            margin-left: 15px;
-            width: 216px;
-        }   
+        .right-half{
+            width: 50%;
+            height: 100px;
+            background: #0c0e10;
+            clip-path: polygon(0% 0%, 94% 0, 100% 50%, 93% 99%, 0% 100%);
+        }
     }
+    .power-btn-container{
+        width: 50px;
+        border: $base-color 1px solid;
+        padding: 3px;
+        border-radius: 0.1rem;
+        .power-btn{
+            background-color: $base-color;
+            height: 3px;
+            width: 100%;
+        }
 
-    .keyboard .right .table{
-        color: $base-color;
+        .power-btn.on{
+            box-shadow: 
+            0 0 3px 4px #fff,
+            0 0 2px 5px #f0f,
+            0 0 1px 1px #b279da;
+        }
     }
+}
+
+.keyboard .keys{
+    display: flex;
+    box-shadow: 0 0.5rem 1rem #e9ecef1a !important;
+    .left{
+        width: 950px;
+    }
+    .right{
+        margin-left: 15px;
+        width: 216px;
+    }   
+}
+
+.keyboard .right .table{
+    color: $base-color;
 }
 
 

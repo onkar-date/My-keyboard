@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { ScreensRoutingModule } from './screens-routing.module';
 import { KeyboardComponent } from './keyboard/keyboard.component';
-import { TopPartComponent } from './keyboard/top-part/top-part.component';
-import { MidPartComponent } from './keyboard/mid-part/mid-part.component';
-import { BottomPartComponent } from './keyboard/bottom-part/bottom-part.component';
+import { LaptopComponent } from './laptop/laptop.component';
+import { BottomPartComponent } from './laptop/bottom-part/bottom-part.component';
+import { MidPartComponent } from './laptop/mid-part/mid-part.component';
+import { TopPartComponent } from './laptop/top-part/top-part.component';
 
 
 @NgModule({
-  declarations: [KeyboardComponent, TopPartComponent, MidPartComponent, BottomPartComponent],
+  declarations: [KeyboardComponent, TopPartComponent, MidPartComponent, BottomPartComponent, LaptopComponent],
   imports: [
     CommonModule,
     ScreensRoutingModule

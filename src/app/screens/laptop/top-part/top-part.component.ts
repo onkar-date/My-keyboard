@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-top-part',
@@ -8,9 +7,9 @@ import { timer } from 'rxjs';
   ]
 })
 export class TopPartComponent implements OnInit {
-
+  
   constructor() { }
-  powerOn = false;
+  powerOn = true;
   ngOnInit(): void {
   }
 
@@ -19,7 +18,7 @@ export class TopPartComponent implements OnInit {
     powerBtn.classList.toggle('on');
     const keyBtns = document.getElementsByClassName('key');
     const hpLogo = document.getElementsByClassName('hp-logo');
-    hpLogo[0].classList.toggle('on');
+    hpLogo[0]?.classList?.toggle('on');
     // tslint:disable-next-line: prefer-for-of
     for (let i = 0; i < keyBtns.length; i++) {
       setTimeout(() => {
