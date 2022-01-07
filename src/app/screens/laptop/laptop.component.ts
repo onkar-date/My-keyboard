@@ -11,6 +11,13 @@ export class LaptopComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.startLaptop();
+    }, 1000);
+  }
+
+  startLaptop(): void {
+    document.getElementById('powerBtn').click();
   }
 
 }
